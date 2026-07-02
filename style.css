@@ -91,7 +91,7 @@ main p {
     border-bottom: 1px solid #eee;
 }
 
-.navigation a > *:hover {
+.navigation a:hover {
     color:#0066cc;
 }
 
@@ -106,10 +106,6 @@ main p {
 .dropdown {
     display: flex;
     flex-direction: column;
-}
-
-.dropdown > *:hover{
-    color: #0052a5;
 }
 
 .dropdown-toggle {

@@ -76,6 +76,10 @@ main { margin-top: 5rem; }
     border-bottom: 1px solid #eee;
 }
 
+.navigation a:hover {
+    color:#0066cc;
+}
+
 .linha-embaixo {
     display: inline-block;
     border-bottom: 2px solid #ff8a00;
