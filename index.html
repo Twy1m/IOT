@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Robôs Industriais & IoT - Indústria 4.0</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="./index.html"><img src="./IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <!-- botão hambúrguer, visível apenas em telas pequenas -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="./index.html"><span class="linha-embaixo">Home</span></a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./HTML/cartesiano.html">Robô Cartesiano</a>
+                            <a href="./HTML/scara.html">Robô SCARA</a>
+                            <a href="./HTML/articulado.html">Robô Articulado</a>
+                            <a href="./HTML/cilindrico.html">Robô Cilíndrico</a>
+                            <a href="./HTML/delta.html">Robô Delta</a>
+                            <a href="./HTML/polar.html">Robô Polar</a>
+                            <a href="./HTML/colaborativo.html">Robô Colaborativo</a>
+                        </div>
+                    </div>
+
+                    <a href="./HTML/referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <div class="div-titulo">
+            <div class="video">
+                <video autoplay loop muted playsinline webkit-playsinline>
+                    <source src="./IMG/videorobo2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <section>
+                <h1 class="title">Robôs Industriais na Indústria 4.0</h1>
+                <p class="hero-text">
+                    Este portal técnico apresenta os principais modelos de robôs industriais utilizados em
+                    processos produtivos automatizados, destacando suas características, aplicações e a
+                    relação de cada um com os conceitos e tecnologias da Internet das Coisas (IoT).
+                </p>
+                <h1 class="title second">Um catálogo para estudar e consultar</h1>
+                <p class="hero-text">
+                    Navegue pelo menu "Robôs Industriais" para conhecer em detalhes cada tipo de robô,
+                    seu princípio de funcionamento, suas aplicações industriais e exemplos reais de
+                    modelos comerciais oferecidos por diferentes fabricantes do mercado.
+                </p>
+            </section>
+        </div>
+
+        <!-- ===================== CONCEITOS FUNDAMENTAIS ===================== -->
+        <h2 class="section-title">Conceitos fundamentais</h2>
+        <p class="section-subtitle">
+            Antes de conhecer cada robô, entenda as bases que sustentam a automação industrial moderna.
+        </p>
+
+        <section class="conceitos">
+            <div class="conceitos-grid">
+                <div class="conceito-card">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h3>Internet das Coisas (IoT)</h3>
+                    <p>
+                        A Internet das Coisas é o conceito de conectar objetos físicos - sensores,
+                        máquinas, atuadores e dispositivos em geral - à internet ou a redes locais,
+                        permitindo que eles coletem, troquem e processem dados de forma automática.
+                        Na indústria, essa conectividade é conhecida como IIoT (Industrial Internet
+                        of Things) e é um dos pilares da Indústria 4.0.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>Robótica Industrial</h3>
+                    <p>
+                        A Robótica Industrial estuda o projeto, a construção e a operação de robôs
+                        aplicados a processos de manufatura. Esses robôs são manipuladores programáveis,
+                        capazes de repetir tarefas com alta precisão, velocidade e resistência, atuando
+                        em atividades como solda, montagem, pintura, paletização e manuseio de materiais.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-industry"></i>
+                    <h3>Importância da automação industrial</h3>
+                    <p>
+                        A automação industrial reduz custos operacionais, aumenta a produtividade e a
+                        qualidade dos produtos, diminui o desperdício e melhora a segurança dos
+                        trabalhadores ao afastá-los de tarefas repetitivas, perigosas ou insalubres.
+                        Ela também garante maior previsibilidade e rastreabilidade aos processos produtivos.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3>Robótica + IoT</h3>
+                    <p>
+                        Quando um robô industrial é equipado com sensores conectados e comunicação em
+                        rede, ele deixa de ser apenas um executor de tarefas e passa a gerar dados em
+                        tempo real sobre seu funcionamento. Essa integração possibilita monitoramento
+                        remoto, manutenção preditiva, controle de qualidade automatizado e a criação de
+                        gêmeos digitais (digital twins) dentro do conceito de fábrica inteligente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CATÁLOGO DE ROBÔS ===================== -->
+        <h2 class="section-title">Catálogo de robôs industriais</h2>
+        <p class="section-subtitle">
+            Clique em "Saiba mais" para acessar a página completa de cada modelo, com especificações
+            técnicas, aplicações, integração com IoT e exemplos de fabricantes.
+        </p>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>Robô Articulado</h2>
+                <p>Imita os movimentos de um braço humano, com várias juntas rotativas. É o tipo mais
+                    versátil e utilizado na indústria, aplicado em soldagem, montagem e pintura.</p>
+                <a class="saiba-mais" href="./HTML/articulado.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/articulado.png" alt="Robô Articulado">
+            </div>
+        </div>
+
+        <div class="robot-card alternate">
+            <div class="robot-text">
+                <h2>Robô Cartesiano</h2>
+                <p>Movimenta-se em linhas retas nos eixos X, Y e Z. Ideal para aplicações que exigem
+                    precisão, como manuseio de peças, corte e impressão 3D.</p>
+                <a class="saiba-mais" href="./HTML/cartesiano.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/Robo-cartesiano-removebg-preview.png" alt="Robô Cartesiano">
+            </div>
+        </div>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>Robô SCARA</h2>
+                <p>Possui braço com juntas horizontais e eixo vertical rígido. Ideal para operações
+                    rápidas e precisas no plano horizontal, como montagem e pick and place.</p>
+                <a class="saiba-mais" href="./HTML/scara.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/Scara.png" alt="Robô SCARA">
+            </div>
+        </div>
+
+        <div class="robot-card alternate">
+            <div class="robot-text">
+                <h2>Robô Cilíndrico</h2>
+                <p>Combina um movimento rotativo na base com movimentos lineares. É usado em tarefas
+                    de montagem, soldagem e manuseio de materiais em espaços compactos.</p>
+                <a class="saiba-mais" href="./HTML/cilindrico.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/Cylindrical-Robot1-removebg-preview.png" alt="Robô Cilíndrico">
+            </div>
+        </div>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>Robô Delta</h2>
+                <p>Estrutura paralela suspensa, projetada para manipular pequenos objetos com rapidez
+                    e exatidão. Muito usado em linhas de embalagem e alimentos.</p>
+                <a class="saiba-mais" href="./HTML/delta.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/Delta.png" alt="Robô Delta">
+            </div>
+        </div>
+
+        <div class="robot-card alternate">
+            <div class="robot-text">
+                <h2>Robô Polar</h2>
+                <p>Também chamado de esférico, possui um braço que gira e se estende em movimento
+                    esférico. Foi um dos primeiros modelos de robôs industriais desenvolvidos.</p>
+                <a class="saiba-mais" href="./HTML/polar.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/Esferico.png" alt="Robô Polar">
+            </div>
+        </div>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>Robô Colaborativo (Cobot)</h2>
+                <p>Projetado para trabalhar lado a lado com pessoas, de forma segura, sem a necessidade
+                    de cercas de proteção. Representa uma das principais tendências da Indústria 4.0.</p>
+                <a class="saiba-mais" href="./HTML/colaborativo.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/ur3e.webp" alt="Robô Colaborativo">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

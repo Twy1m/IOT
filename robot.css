@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ===== RESET ===== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+main { margin-top: 5rem; }
+
+/* ===== CABEÇALHO / NAVEGAÇÃO (igual à home) ===== */
+.div-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    top: 0;
+    z-index: 1000;
+    padding: 0 1rem;
+}
+
+.img-senai { width: 120px; height: auto; }
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #212121;
+    z-index: 1001;
+}
+
+.navigation {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.navigation.open { max-height: 500px; }
+
+.navigation nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 1.2rem 20px;
+}
+
+.navigation a {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.linha-embaixo {
+    display: inline-block;
+    border-bottom: 2px solid #ff8a00;
+    padding-bottom: 2px;
+}
+
+.dropdown { display: flex; flex-direction: column; }
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 1rem;
+}
+
+.dropdown.open .dropdown-menu { max-height: 400px; }
+
+.dropdown-menu a {
+    border-bottom: none;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ===== HERO DA PÁGINA DO ROBÔ ===== */
+.hero {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(180deg, #ECEFF4 0%, #ffffff 100%);
+}
+
+.hero .breadcrumb {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.hero h1 { margin-bottom: 15px; font-family: "Merriweather Sans"; }
+
+.hero-img {
+    max-width: 260px;
+    width: 100%;
+    margin: 15px auto;
+    display: block;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== SOBRE / PRINCÍPIO DE FUNCIONAMENTO ===== */
+.sobre {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sobre h2 { font-family: "Merriweather Sans"; margin-bottom: 12px; }
+
+.sobre p { line-height: 1.6; margin-bottom: 12px; }
+
+/* ===== ABAS (TABS) ===== */
+.tabs-section {
+    padding: 20px 20px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    background: #F1F5F9;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #333;
+}
+
+.tab-btn:hover { background: #dde6ee; }
+
+.tab-btn.active {
+    background: #0070c9;
+    color: #fff;
+}
+
+.tab-content { display: none; animation: fadeIn 0.35s ease; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h2 {
+    text-align: center;
+    font-family: "Merriweather Sans";
+    margin-bottom: 22px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #F1F5F9;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+    color: #0070c9;
+}
+
+/* texto de integração IoT */
+.iot-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+.iot-text p { margin-bottom: 14px; }
+
+.iot-protocolos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.protocolo-tag {
+    background: #0070c9;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* modelos comerciais */
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.modelo-card {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease;
+}
+
+.modelo-card:hover { transform: translateY(-4px); }
+
+.modelo-fabricante {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0070c9;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.modelo-nome {
+    font-family: "Merriweather Sans";
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.modelo-card ul { padding-left: 18px; font-size: 0.92rem; line-height: 1.6; }
+
+/* ===== RODAPÉ ===== */
+.contatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.3rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1.5rem;
+    background-color: #212121;
+    color: white;
+}
+
+.contatos i {
+    font-size: 30px;
+    color: #0066cc;
+    transition: all 250ms ease-in-out;
+}
+
+.contatos i:hover { transform: scale(1.1); color: #0052a5; }
+
+.contato-item { padding: 4px; }
+.contato-item p { font-weight: bold; font-size: 16px; }
+.contato-item .email { font-size: 12px; color: rgb(220, 220, 220); }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (min-width: 440px) {
+    .img-senai { width: 125px; }
+    .div-header { padding-right: 20px; }
+}
+
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+
+    .navigation {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .navigation nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 22px;
+    }
+
+    .navigation a { border-bottom: none; padding: 0; }
+
+    .dropdown { position: relative; flex-direction: row; }
+
+    .dropdown-toggle { border-bottom: none; padding: 0; width: auto; gap: 6px; }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        padding: 0 1rem;
+        min-width: 190px;
+        max-height: 0;
+    }
+
+    .dropdown.open .dropdown-menu { max-height: 400px; padding: 0.6rem 1rem; }
+
+    .hero h1 { font-size: 2rem; }
+}

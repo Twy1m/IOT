@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../robot.css">
+    <script src="../js/script.js" defer></script>
+    <title>Robô SCARA - Robôs Industriais</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../index.html"><img src="../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../index.html">Home</a>
+
+                    <div class="dropdown open">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./cartesiano.html">Robô Cartesiano</a>
+                            <a href="./scara.html" class="linha-embaixo">Robô SCARA</a>
+                            <a href="./articulado.html">Robô Articulado</a>
+                            <a href="./cilindrico.html">Robô Cilíndrico</a>
+                            <a href="./delta.html">Robô Delta</a>
+                            <a href="./polar.html">Robô Polar</a>
+                            <a href="./colaborativo.html">Robô Colaborativo (Cobot)</a>
+                        </div>
+                    </div>
+
+                    <a href="./referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../index.html">Home</a> / Robôs Industriais / Robô SCARA</p>
+            <h1>Robô SCARA</h1>
+            <img src="../IMG/Scara.png" alt="Robô SCARA" class="hero-img">
+            <p>SCARA significa Selective Compliance Assembly Robot Arm. É um braço robótico com dois eixos rotativos horizontais e um eixo vertical linear, ideal para tarefas rápidas e precisas no plano horizontal.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>O robô SCARA foi desenvolvido para operações de montagem que exigem alta velocidade no plano horizontal e rigidez no eixo vertical. Sua estrutura em formato de "braço duplo" permite movimentos rápidos e repetitivos, sendo um dos tipos de robô mais utilizados em linhas de montagem eletrônica e embalagem.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>O robô possui duas juntas rotativas paralelas, que se movem no plano horizontal (X e Y), e uma junta linear no punho, responsável pelo movimento vertical (Z) e por uma rotação adicional do efetuador. Essa configuração torna o robô rígido na direção vertical, mas complacente (flexível) na direção horizontal, o que facilita a inserção de peças, como conectores e parafusos, mesmo com pequenos desalinhamentos.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Características técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações industriais</button>
+                <button class="tab-btn" data-tab="iot">Integração com IoT</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Características técnicas</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-bolt"></i><p>Alta velocidade de ciclo, ideal para operações repetitivas</p></div>
+                    <div class="card"><i class="fa-solid fa-bullseye"></i><p>Repetibilidade tipicamente entre ±0,01 mm e ±0,05 mm</p></div>
+                    <div class="card"><i class="fa-solid fa-weight-hanging"></i><p>Cargas úteis geralmente entre 1 kg e 20 kg</p></div>
+                    <div class="card"><i class="fa-solid fa-circle-notch"></i><p>Área de trabalho circular ou semicircular</p></div>
+                    <div class="card"><i class="fa-solid fa-gear"></i><p>4 eixos de movimento (X, Y, Z e rotação do punho)</p></div>
+                    <div class="card"><i class="fa-solid fa-display"></i><p>Programação simplificada, própria para montagem</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Montagem de componentes eletrônicos</p></div>
+                    <div class="card"><i class="fa-solid fa-plug"></i><p>Inserção de peças e conectores</p></div>
+                    <div class="card"><i class="fa-solid fa-box"></i><p>Embalagem e pick and place em alta velocidade</p></div>
+                    <div class="card"><i class="fa-solid fa-vial"></i><p>Dispensação de líquidos e adesivos</p></div>
+                    <div class="card"><i class="fa-solid fa-flask"></i><p>Testes e inspeção de qualidade</p></div>
+                    <div class="card"><i class="fa-solid fa-screwdriver-wrench"></i><p>Aparafusamento automatizado</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="iot">
+                <h2>Integração com automação e IoT</h2>
+                <div class="iot-text">
+                    <p>Robôs SCARA costumam operar integrados a sistemas MES (Manufacturing Execution System) por meio de redes industriais como Ethernet/IP ou PROFINET, recebendo ordens de produção e reportando o status de cada ciclo em tempo real.</p>
+                    <p>A integração com câmeras de visão computacional conectadas à mesma rede permite inspeção de qualidade automatizada logo após a montagem, enquanto os dados de ciclo alimentam painéis de eficiência (OEE) usados na tomada de decisão da fábrica.</p>
+                    <div class="iot-protocolos">
+                        <span class="protocolo-tag">EtherNet/IP</span>
+                        <span class="protocolo-tag">PROFINET</span>
+                        <span class="protocolo-tag">OPC UA</span>
+                        <span class="protocolo-tag">MQTT</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Epson Robots</div>
+                    <div class="modelo-nome">Linha T6 / G-Series SCARA</div>
+                    <ul>
+                        <li>Ciclos de montagem em alta velocidade</li>
+                        <li>Cargas de até cerca de 6 kg</li>
+                        <li>Controlador compacto integrado</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Yamaha Motor Robotics</div>
+                    <div class="modelo-nome">Linha YK SCARA</div>
+                    <ul>
+                        <li>Ampla faixa de alcances de braço</li>
+                        <li>Alta repetibilidade para eletrônica</li>
+                        <li>Compatível com controladores de rede industrial</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Stäubli</div>
+                    <div class="modelo-nome">Linha TS2 SCARA</div>
+                    <ul>
+                        <li>Alta rigidez estrutural</li>
+                        <li>Opções para ambientes limpos (salas limpas)</li>
+                        <li>Elevada velocidade de ciclo</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">seuemail@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

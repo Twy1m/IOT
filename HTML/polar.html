@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../robot.css">
+    <script src="../js/script.js" defer></script>
+    <title>Robô Polar - Robôs Industriais</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../index.html"><img src="../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../index.html">Home</a>
+
+                    <div class="dropdown open">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./cartesiano.html">Robô Cartesiano</a>
+                            <a href="./scara.html">Robô SCARA</a>
+                            <a href="./articulado.html">Robô Articulado</a>
+                            <a href="./cilindrico.html">Robô Cilíndrico</a>
+                            <a href="./delta.html">Robô Delta</a>
+                            <a href="./polar.html" class="linha-embaixo">Robô Polar</a>
+                            <a href="./colaborativo.html">Robô Colaborativo (Cobot)</a>
+                        </div>
+                    </div>
+
+                    <a href="./referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../index.html">Home</a> / Robôs Industriais / Robô Polar</p>
+            <h1>Robô Polar</h1>
+            <img src="../IMG/Esferico.png" alt="Robô Polar" class="hero-img">
+            <p>O robô Polar, também chamado de esférico, foi um dos primeiros tipos de robô industrial desenvolvidos, combinando duas juntas rotativas com uma junta linear.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>O robô Polar utiliza um sistema de coordenadas esféricas (ou polares) para posicionar seu efetuador. Ele possui uma junta rotativa na base (como um giro de torre), uma junta rotativa no "ombro" e uma junta linear que estende ou retrai o braço, criando um envelope de trabalho em formato esférico. O Unimate, considerado o primeiro robô industrial da história, era um robô desse tipo.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>A base gira em torno de um eixo vertical, uma segunda junta rotativa inclina o braço para cima ou para baixo, e uma junta linear (prismática) estende ou recolhe o braço radialmente. A combinação dessas três articulações permite alcançar qualquer ponto dentro de uma "casca" esférica ao redor da base do robô.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Características técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações industriais</button>
+                <button class="tab-btn" data-tab="iot">Integração com IoT</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Características técnicas</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-gear"></i><p>2 juntas rotativas + 1 junta linear (RRP)</p></div>
+                    <div class="card"><i class="fa-solid fa-globe"></i><p>Envelope de trabalho em formato esférico</p></div>
+                    <div class="card"><i class="fa-solid fa-weight-hanging"></i><p>Boa capacidade de carga para tarefas pesadas</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Estrutura robusta, própria para ambientes exigentes</p></div>
+                    <div class="card"><i class="fa-solid fa-clock-rotate-left"></i><p>Tecnologia consolidada, uma das mais antigas da robótica industrial</p></div>
+                    <div class="card"><i class="fa-solid fa-screwdriver"></i><p>Manutenção relativamente simples</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-fire"></i><p>Soldagem a ponto em larga escala</p></div>
+                    <div class="card"><i class="fa-solid fa-box-open"></i><p>Manuseio de materiais pesados</p></div>
+                    <div class="card"><i class="fa-solid fa-spray-can"></i><p>Pintura industrial de grandes peças</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Alimentação de máquinas e prensas</p></div>
+                    <div class="card"><i class="fa-solid fa-warehouse"></i><p>Movimentação de peças em fundições</p></div>
+                    <div class="card"><i class="fa-solid fa-layer-group"></i><p>Empilhamento e carga de materiais</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="iot">
+                <h2>Integração com automação e IoT</h2>
+                <div class="iot-text">
+                    <p>Embora o robô Polar seja um dos modelos mais antigos, unidades modernizadas podem receber retrofit com sensores de posição, encoders e módulos de comunicação, permitindo sua integração a sistemas de supervisão SCADA e a redes industriais.</p>
+                    <p>Essa modernização possibilita o acompanhamento remoto do estado do robô, alertas automáticos de manutenção e a inclusão desses equipamentos legados dentro de projetos de digitalização de fábricas (retrofit para Indústria 4.0).</p>
+                    <div class="iot-protocolos">
+                        <span class="protocolo-tag">Modbus RTU/TCP</span>
+                        <span class="protocolo-tag">OPC UA</span>
+                        <span class="protocolo-tag">SCADA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Kawasaki Robotics</div>
+                    <div class="modelo-nome">Kawasaki-Unimate (referência histórica da linha polar)</div>
+                    <ul>
+                        <li>Primeiro robô industrial fabricado no Japão</li>
+                        <li>Base para o desenvolvimento da robótica industrial japonesa</li>
+                        <li>Aplicado originalmente em soldagem automotiva</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Unimation</div>
+                    <div class="modelo-nome">Unimate (o primeiro robô industrial do mundo)</div>
+                    <ul>
+                        <li>Robô pioneiro, lançado nos anos 1960</li>
+                        <li>Referência histórica do sistema de coordenadas polares</li>
+                        <li>Base conceitual para os robôs industriais atuais</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Diversos integradores</div>
+                    <div class="modelo-nome">Robôs polares retrofitados para linhas legadas</div>
+                    <ul>
+                        <li>Adaptação de robôs polares antigos com novos controladores</li>
+                        <li>Adição de sensores e módulos de comunicação</li>
+                        <li>Uso em plantas industriais que mantêm equipamentos legados</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">seuemail@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

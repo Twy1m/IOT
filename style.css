@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cossette+Texte:wght@400;700&family=Mate:ital@0;1&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ===== RESET GERAL ===== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main p {
+    font-family: "Alegreya Sans";
+}
+
+/* ===== CABEÇALHO / NAVEGAÇÃO ===== */
+.div-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    top: 0;
+    z-index: 1000;
+    padding: 0 1rem;
+}
+
+.img-senai {
+    width: 120px;
+    height: auto;
+}
+
+/* botão hambúrguer (visível apenas no mobile) */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #212121;
+    z-index: 1001;
+}
+
+.navigation {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.navigation.open {
+    max-height: 500px;
+}
+
+.navigation nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 1.2rem 20px;
+}
+
+.navigation a {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navigation a > *:hover {
+    color:#0066cc;
+}
+
+
+.linha-embaixo {
+    display: inline-block;
+    border-bottom: 2px solid #ff8a00;
+    padding-bottom: 2px;
+}
+
+/* dropdown "Robôs" */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown > *:hover{
+    color: #0052a5;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 1rem;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 400px;
+}
+
+.dropdown-menu a {
+    border-bottom: none;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ===== HERO / VÍDEO ===== */
+.div-titulo {
+    position: relative;
+    min-height: 500px;
+    margin-top: 75px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.div-titulo .title.second {
+    margin-top: 4rem;
+}
+
+.div-titulo .hero-text {
+    text-align: center;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.div-titulo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+}
+
+.div-titulo section {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+}
+
+.div-titulo section p {
+    text-align: justify;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+}
+
+/* ===== SEÇÃO DE CONCEITOS (IoT / Robótica / Automação) ===== */
+.conceitos {
+    padding: 3rem 1rem;
+    background-color: #f8f9fb;
+}
+
+.conceitos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.conceito-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid #0070c9;
+}
+
+.conceito-card i {
+    font-size: 2rem;
+    color: #0070c9;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.conceito-card h3 {
+    font-family: "Merriweather Sans";
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+}
+
+.conceito-card p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Merriweather Sans";
+    font-size: 1.8rem;
+    padding: 2.5rem 1rem 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    padding: 0 1rem;
+    font-family: "Alegreya Sans";
+    color: #555;
+}
+
+/* ===== CARDS DE ROBÔS (catálogo) ===== */
+.robot-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    width: 95%;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    text-align: left;
+    background-color: #f1f5f9;
+}
+
+.robot-card h2 {
+    text-align: center;
+}
+
+.robot-card.alternate {
+    background-color: #e4e7ec;
+}
+
+.robot-card:hover {
+    transform: translateY(-6px);
+}
+
+.robot-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: "Merriweather Sans";
+}
+
+.robot-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.saiba-mais {
+    display: inline-block;
+    margin-top: 4px;
+    color: #0070c9;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.saiba-mais:hover {
+    text-decoration: underline;
+}
+
+.robot-img img, .robot-img svg {
+    width: 250px;
+    height: auto;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.robot-img img:hover, .robot-img svg:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RODAPÉ / CONTATOS ===== */
+.contatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.3rem;
+    text-align: center;
+    padding: 1.1rem;
+    background-color: #212121;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.contatos i {
+    font-size: 30px;
+    color: #0066cc;
+}
+
+.contatos i:hover {
+    font-size: 32px;
+    color: #0052a5;
+    transition: ease-in-out 500ms;
+}
+
+.contato-item {
+    padding: 2px;
+}
+
+.contato-item p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contato-item .email {
+    font-size: 12px;
+    color: rgb(220, 220, 220);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 410px) {
+    .div-header { padding-right: 15px; }
+}
+
+@media (min-width: 440px) {
+    .img-senai { width: 125px; }
+    .div-header { padding-right: 20px; }
+}
+
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+
+    .navigation {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .navigation nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 22px;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .dropdown {
+        position: relative;
+        flex-direction: row;
+    }
+
+    .dropdown-toggle {
+        border-bottom: none;
+        padding: 0;
+        width: auto;
+        gap: 6px;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        padding: 0 1rem;
+        min-width: 190px;
+        max-height: 0;
+    }
+
+    .dropdown.open .dropdown-menu {
+        max-height: 400px;
+        padding: 0.6rem 1rem;
+    }
+
+    .conceitos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .robot-card.alternate,
+    .robot-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .div-titulo { height: 700px; }
+
+    .div-titulo section p { font-size: 1.1rem; }
+}
+
+@media (min-width: 1000px) {
+    .conceitos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

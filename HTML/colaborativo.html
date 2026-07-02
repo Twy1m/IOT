@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../robot.css">
+    <script src="../js/script.js" defer></script>
+    <title>Robô Colaborativo (Cobot) - Robôs Industriais</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../index.html"><img src="../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../index.html">Home</a>
+
+                    <div class="dropdown open">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./cartesiano.html">Robô Cartesiano</a>
+                            <a href="./scara.html">Robô SCARA</a>
+                            <a href="./articulado.html">Robô Articulado</a>
+                            <a href="./cilindrico.html">Robô Cilíndrico</a>
+                            <a href="./delta.html">Robô Delta</a>
+                            <a href="./polar.html">Robô Polar</a>
+                            <a href="./colaborativo.html" class="linha-embaixo">Robô Colaborativo (Cobot)</a>
+                        </div>
+                    </div>
+
+                    <a href="./referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../index.html">Home</a> / Robôs Industriais / Robô Colaborativo (Cobot)</p>
+            <h1>Robô Colaborativo (Cobot)</h1>
+            <img src="../IMG/ur3e.webp" alt="Robô Colaborativo" class="hero-img">
+            <p>Os robôs Colaborativos, ou cobots, foram projetados para trabalhar lado a lado com pessoas, de forma segura, sem a necessidade de cercas ou barreiras de proteção.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>Cobots são uma evolução dos robôs industriais tradicionais. Diferentemente dos robôs convencionais, que operam isolados em células cercadas por questões de segurança, os cobots possuem sensores de força, torque e proximidade que permitem sua parada ou redução de velocidade imediata ao detectar contato com uma pessoa, tornando viável a colaboração direta entre humano e robô.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>Internamente, a maioria dos cobots utiliza a mesma arquitetura de um robô articulado (várias juntas rotativas), porém com sensores de torque em cada junta e software de segurança certificado, que monitoram continuamente a força aplicada e limitam a velocidade e a potência do robô conforme normas de segurança específicas (como a ISO/TS 15066). Muitos modelos também permitem programação por demonstração, em que o operador move o braço manualmente para "ensinar" a trajetória.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Características técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações industriais</button>
+                <button class="tab-btn" data-tab="iot">Integração com IoT</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Características técnicas</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-shield-halved"></i><p>Sensores de força e torque para parada segura</p></div>
+                    <div class="card"><i class="fa-solid fa-weight-hanging"></i><p>Cargas geralmente entre 3 kg e 20 kg</p></div>
+                    <div class="card"><i class="fa-solid fa-ruler"></i><p>Alcance típico entre 500 mm e 1.300 mm</p></div>
+                    <div class="card"><i class="fa-solid fa-hand"></i><p>Operação sem cercas em ambientes colaborativos</p></div>
+                    <div class="card"><i class="fa-solid fa-display"></i><p>Programação intuitiva por demonstração</p></div>
+                    <div class="card"><i class="fa-solid fa-graduation-cap"></i><p>Fácil reprogramação para novas tarefas</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-screwdriver-wrench"></i><p>Montagem de peças pequenas</p></div>
+                    <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><p>Testes e inspeções de qualidade</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Automação de bancadas de trabalho</p></div>
+                    <div class="card"><i class="fa-solid fa-graduation-cap"></i><p>Educação e treinamento em automação</p></div>
+                    <div class="card"><i class="fa-solid fa-box"></i><p>Embalagem e paletização leve</p></div>
+                    <div class="card"><i class="fa-solid fa-people-arrows"></i><p>Tarefas compartilhadas com operadores humanos</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="iot">
+                <h2>Integração com automação e IoT</h2>
+                <div class="iot-text">
+                    <p>Cobots são projetados desde o início para se conectarem facilmente a redes industriais, com interfaces de programação em nuvem, painéis touch screen e APIs que facilitam sua integração a sistemas MES e a plataformas de IoT industrial.</p>
+                    <p>Essa conectividade nativa permite o monitoramento remoto do desempenho, atualizações de software OTA (over-the-air), coleta de dados de produtividade e até o compartilhamento de programas entre múltiplas unidades instaladas em diferentes linhas de produção.</p>
+                    <div class="iot-protocolos">
+                        <span class="protocolo-tag">MQTT</span>
+                        <span class="protocolo-tag">OPC UA</span>
+                        <span class="protocolo-tag">PROFINET</span>
+                        <span class="protocolo-tag">REST/API em nuvem</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Universal Robots</div>
+                    <div class="modelo-nome">UR3e / UR5e / UR10e</div>
+                    <ul>
+                        <li>Programação intuitiva com PolyScope</li>
+                        <li>Cargas de 3 kg a 10 kg conforme o modelo</li>
+                        <li>Ampla base de aplicações educacionais e industriais</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">FANUC</div>
+                    <div class="modelo-nome">Linha CRX</div>
+                    <ul>
+                        <li>Interface de programação simplificada</li>
+                        <li>Sensores de contato integrados ao braço</li>
+                        <li>Fácil implantação em bancadas de produção</li>
+                    </ul>
+                </div>
+
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">KUKA</div>
+                    <div class="modelo-nome">LBR iiwa</div>
+                    <ul>
+                        <li>Sensores de torque em todas as juntas</li>
+                        <li>Alta sensibilidade para tarefas delicadas</li>
+                        <li>Uso em montagem de precisão e pesquisa</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">seuemail@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
