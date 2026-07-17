@@ -9,6 +9,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sensores.css">
     <script src="./js/script.js" defer></script>
     <title>Robôs Industriais & IoT - Indústria 4.0</title>
 </head>
@@ -41,6 +42,39 @@
                         </div>
                     </div>
 
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="./HTML/catalogo-sensores.html" class="ver-catalogo-link">Ver catálogo completo</a><br>
+                            <a href="./HTML/sensores/acs712.html">ACS712</a><br>
+                            <a href="./HTML/sensores/bh1750.html">BH1750</a><br>
+                            <a href="./HTML/sensores/celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./HTML/sensores/dht11.html">DHT11</a><br>
+                            <a href="./HTML/sensores/dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./HTML/sensores/ds18b20.html">DS18B20</a><br>
+                            <a href="./HTML/sensores/ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./HTML/sensores/hc-sr04.html">HC-SR04</a><br>
+                            <a href="./HTML/sensores/ky-037.html">KY-037</a><br>
+                            <a href="./HTML/sensores/ldr.html">LDR</a><br>
+                            <a href="./HTML/sensores/lm35.html">LM35</a><br>
+                            <a href="./HTML/sensores/mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./HTML/sensores/mq-135.html">MQ-135</a><br>
+                            <a href="./HTML/sensores/mq-2.html">MQ-2</a><br>
+                            <a href="./HTML/sensores/pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./HTML/sensores/sw-420.html">SW-420</a><br>
+                            <a href="./HTML/sensores/lj18a3.html">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./HTML/sensores/soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./HTML/sensores/fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./HTML/sensores/hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./HTML/sensores/lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./HTML/sensores/chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./HTML/sensores/boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./HTML/sensores/yf-s201.html">YF-S201</a><br>
+                            <a href="./HTML/sensores/zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="./HTML/arduino.html">Arduino</a>
                     <a href="./HTML/referencias.html">Referências</a>
                 </nav>
             </div>
@@ -122,6 +156,55 @@
                         tempo real sobre seu funcionamento. Essa integração possibilita monitoramento
                         remoto, manutenção preditiva, controle de qualidade automatizado e a criação de
                         gêmeos digitais (digital twins) dentro do conceito de fábrica inteligente.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                    <h3>O conceito de Sensoriamento</h3>
+                    <p>
+                        Sensoriamento é o processo de capturar grandezas físicas do ambiente ou de um
+                        processo produtivo - como temperatura, distância, presença, corrente elétrica ou
+                        vibração - e convertê-las em sinais elétricos que um sistema eletrônico consegue
+                        interpretar. É a "porta de entrada" de qualquer sistema de automação ou IoT: sem
+                        sensores, não há dados para monitorar nem decisões automáticas a tomar.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>Sensores na Automação Industrial</h3>
+                    <p>
+                        Os sensores são essenciais na automação industrial porque fornecem, em tempo
+                        real, as informações necessárias para que máquinas, CLPs e sistemas supervisórios
+                        tomem decisões sem intervenção humana. Eles permitem detectar falhas, garantir a
+                        qualidade do produto, otimizar o consumo de energia e aumentar a segurança de
+                        operadores e equipamentos.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Sensores, comunicação de dados e controle</h3>
+                    <p>
+                        Em um sistema de IoT industrial, o sensor mede uma grandeza física, um
+                        microcontrolador (Arduino, ESP32) ou CLP converte essa leitura em um sinal digital
+                        e a transmite por um protocolo de comunicação (analógico, digital, I2C, SPI, UART
+                        ou 4-20 mA). Esse dado então alimenta a lógica de controle do processo, que pode
+                        acionar atuadores automaticamente ou enviar informações a um painel de
+                        monitoramento remoto.
+                    </p>
+                </div>
+
+                <div class="conceito-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Arduino - Conceito, funcionamento e programação</h3>
+                    <p>
+                        O Arduino é uma plataforma de prototipagem eletrônica de código aberto usada para
+                        ler sensores e controlar atuadores por meio de um microcontrolador programável.
+                        Seus programas (sketches) seguem a estrutura setup()/loop() e são escritos em
+                        C/C++ pela IDE Arduino.
+                        <a class="saiba-mais" href="./HTML/arduino.html">Conhecer o Arduino em detalhes <i class="fa-solid fa-arrow-right"></i></a>
                     </p>
                 </div>
             </div>
@@ -216,6 +299,67 @@
             <div class="robot-img">
                 <img src="./IMG/ur3e.webp" alt="Robô Colaborativo">
             </div>
+        </div>
+
+        <!-- ===================== CATÁLOGO DE SENSORES (destaque) ===================== -->
+        <h2 class="section-title">Catálogo de sensores IoT e industriais</h2>
+        <p class="section-subtitle">
+            25 sensores documentados com conceito, funcionamento, especificações técnicas, tipo de
+            sinal, aplicações, exemplo de uso e fabricantes. Confira alguns destaques abaixo ou acesse
+            o catálogo completo.
+        </p>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>DHT11 - Temperatura e Umidade</h2>
+                <p>Sensor digital de baixo custo muito usado em estações meteorológicas simples,
+                    estufas e projetos educacionais de IoT.</p>
+                <a class="saiba-mais" href="./HTML/sensores/dht11.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/sensores/dht11.svg" alt="Sensor DHT11">
+            </div>
+        </div>
+
+        <div class="robot-card alternate">
+            <div class="robot-text">
+                <h2>HC-SR04 - Distância</h2>
+                <p>Sensor ultrassônico que mede distâncias entre 2cm e 400cm, muito usado em robôs
+                    móveis e medição de nível em tanques.</p>
+                <a class="saiba-mais" href="./HTML/sensores/hc-sr04.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/sensores/hc-sr04.svg" alt="Sensor HC-SR04">
+            </div>
+        </div>
+
+        <div class="robot-card">
+            <div class="robot-text">
+                <h2>ACS712 - Corrente</h2>
+                <p>Sensor de efeito Hall que mede corrente elétrica AC/DC de forma isolada, essencial
+                    em monitoramento de energia e proteção de motores.</p>
+                <a class="saiba-mais" href="./HTML/sensores/acs712.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/sensores/acs712.svg" alt="Sensor ACS712">
+            </div>
+        </div>
+
+        <div class="robot-card alternate">
+            <div class="robot-text">
+                <h2>MFRC522 - RFID</h2>
+                <p>Módulo leitor RFID de 13,56MHz usado em controle de acesso, identificação e
+                    rastreamento de ativos.</p>
+                <a class="saiba-mais" href="./HTML/sensores/mfrc522.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="robot-img">
+                <img src="./IMG/sensores/mfrc522.svg" alt="Sensor MFRC522">
+            </div>
+        </div>
+
+        <div class="cta-sensores">
+            <a class="cta-btn" href="./HTML/catalogo-sensores.html"><i class="fa-solid fa-list"></i> Ver catálogo completo (25 sensores)</a>
+            <a class="cta-btn cta-btn-outline" href="./HTML/arduino.html"><i class="fa-solid fa-code"></i> Exemplos de programação Arduino</a>
         </div>
 
     </main>

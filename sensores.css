@@ -1,0 +1,288 @@
+/* =========================================================
+   sensores.css
+   Estilos específicos da seção "Sensores IoT" e "Arduino":
+   badges de categoria, caixa de tipo de sinal, dropdown longo
+   do menu, catálogo filtrável e blocos de código Arduino.
+   Depende de style.css / robot.css já carregados antes dele.
+   ========================================================= */
+
+/* ===== CTA da home para o catálogo de sensores / Arduino ===== */
+.cta-sensores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    padding: 10px 20px 50px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0070c9;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 24px;
+    border-radius: 30px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover { background: #005a9e; transform: translateY(-2px); }
+
+.cta-btn-outline {
+    background: #fff;
+    color: #0070c9;
+    border: 2px solid #0070c9;
+}
+
+.cta-btn-outline:hover { background: #eaf4fc; }
+
+/* ===== Títulos de seção (usados em arduino.html / catalogo-sensores.html,
+   que carregam robot.css em vez de style.css) ===== */
+.section-title {
+    text-align: center;
+    font-family: "Merriweather Sans";
+    font-size: 1.8rem;
+    padding: 2.5rem 1rem 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    padding: 0 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #555;
+}
+
+/* ===== Dropdown "Sensores IoT" (lista longa, com rolagem) ===== */
+.dropdown-menu-scroll {
+    max-height: 0;
+}
+
+.dropdown.open .dropdown-menu-scroll {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.ver-catalogo-link {
+    color: #0070c9 !important;
+    font-weight: 700;
+    border-bottom: 1px dashed #0070c9 !important;
+}
+
+/* ===== Badge de categoria (páginas de sensor) ===== */
+.categoria-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #eaf4fc;
+    color: #0070c9;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.sensor-hero-img {
+    max-width: 220px;
+}
+
+/* ===== Caixa de "Tipo de sinal" (aba Especificações) ===== */
+.tipo-sinal-box {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.protocolo-tag-lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 8px 18px;
+    margin-bottom: 10px;
+}
+
+.tipo-sinal-box p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.55;
+}
+
+/* ===== Catálogo de sensores (catalogo-sensores.html) ===== */
+.catalogo-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    text-align: center;
+}
+
+.catalogo-intro p { line-height: 1.6; color: #444; }
+
+.filtros-wrapper {
+    max-width: 1100px;
+    margin: 25px auto 10px;
+    padding: 0 20px;
+}
+
+.busca-sensor {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 18px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #dde3ea;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.busca-sensor:focus { border-color: #0070c9; }
+
+.filtros-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.filtro-btn {
+    background: #F1F5F9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.82rem;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.filtro-btn:hover { background: #dde6ee; }
+
+.filtro-btn.active {
+    background: #0070c9;
+    color: #fff;
+}
+
+.contador-resultados {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    margin: 16px 0 4px;
+}
+
+.sensores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+}
+
+.sensor-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.sensor-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.sensor-card h3 {
+    font-family: "Merriweather Sans";
+    font-size: 1.02rem;
+    margin-bottom: 6px;
+}
+
+.sensor-card .categoria-badge {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+}
+
+.sensor-card .sinal-mini {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.sem-resultados {
+    text-align: center;
+    color: #888;
+    padding: 40px 20px;
+    display: none;
+}
+
+.sem-resultados.show { display: block; }
+
+/* ===== Página Arduino: bloco de características ===== */
+.arduino-specs-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px 0;
+}
+
+/* ===== Blocos de código (página Arduino) ===== */
+.codigo-meta {
+    max-width: 850px;
+    margin: 0 auto 16px;
+    padding: 0 4px;
+}
+
+.codigo-meta p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.codigo-meta i { color: #0070c9; width: 18px; text-align: center; margin-right: 4px; }
+
+pre.codigo-arduino {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #1e1e2e;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+
+pre.codigo-arduino code {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    white-space: pre;
+}
+
+/* ===== Responsividade ===== */
+@media (min-width: 768px) {
+    .sensores-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+}

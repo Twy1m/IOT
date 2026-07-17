@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../robot.css">
+    <link rel="stylesheet" href="../sensores.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/sensores.js" defer></script>
+    <title>Catálogo de Sensores - IoT e Automação Industrial</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../index.html"><img src="../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../index.html">Home</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./cartesiano.html">Robô Cartesiano</a><br>
+                            <a href="./scara.html">Robô SCARA</a><br>
+                            <a href="./articulado.html">Robô Articulado</a><br>
+                            <a href="./cilindrico.html">Robô Cilíndrico</a><br>
+                            <a href="./delta.html">Robô Delta</a><br>
+                            <a href="./polar.html">Robô Polar</a><br>
+                            <a href="./colaborativo.html">Robô Colaborativo</a><br>
+                        </div>
+                    </div>
+
+                    <div class="dropdown open">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="./catalogo-sensores.html" class="linha-embaixo">Ver catálogo completo</a><br>
+                            <a href="./sensores/acs712.html">ACS712</a><br>
+                            <a href="./sensores/bh1750.html">BH1750</a><br>
+                            <a href="./sensores/celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./sensores/dht11.html">DHT11</a><br>
+                            <a href="./sensores/dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./sensores/ds18b20.html">DS18B20</a><br>
+                            <a href="./sensores/ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./sensores/hc-sr04.html">HC-SR04</a><br>
+                            <a href="./sensores/ky-037.html">KY-037</a><br>
+                            <a href="./sensores/ldr.html">LDR</a><br>
+                            <a href="./sensores/lm35.html">LM35</a><br>
+                            <a href="./sensores/mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./sensores/mq-135.html">MQ-135</a><br>
+                            <a href="./sensores/mq-2.html">MQ-2</a><br>
+                            <a href="./sensores/pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./sensores/sw-420.html">SW-420</a><br>
+                            <a href="./sensores/lj18a3.html">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./sensores/soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./sensores/fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./sensores/hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./sensores/lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./sensores/chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./sensores/boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./sensores/yf-s201.html">YF-S201</a><br>
+                            <a href="./sensores/zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="./arduino.html">Arduino</a>
+                    <a href="./referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../index.html">Home</a> / Sensores IoT</p>
+            <h1>Catálogo de Sensores IoT e Industriais</h1>
+            <p>Catálogo técnico com 25 sensores utilizados em projetos de Internet das Coisas e Automação Industrial com Arduino, ESP32, Raspberry Pi e CLPs. Use a busca ou os filtros por categoria para encontrar o sensor ideal para o seu projeto.</p>
+        </section>
+
+        <div class="catalogo-intro">
+            <p>Cada sensor conta com página própria trazendo conceito, princípio de funcionamento, especificações técnicas, tipo de sinal, aplicações, exemplo de uso e fabricantes/modelos comerciais.</p>
+        </div>
+
+        <!-- ===================== FILTROS ===================== -->
+        <div class="filtros-wrapper">
+            <input type="text" id="buscaSensor" class="busca-sensor" placeholder="Buscar sensor pelo nome...">
+            <div class="filtros-categorias" id="filtrosCategorias">
+                <button class="filtro-btn active" data-categoria="todos">Todos (25)</button>
+                <button class="filtro-btn" data-categoria="Chama">Chama (1)</button>
+                <button class="filtro-btn" data-categoria="Chuva">Chuva (1)</button>
+                <button class="filtro-btn" data-categoria="Corrente">Corrente (1)</button>
+                <button class="filtro-btn" data-categoria="Distância">Distância (1)</button>
+                <button class="filtro-btn" data-categoria="Encoder">Encoder (1)</button>
+                <button class="filtro-btn" data-categoria="Fluxo">Fluxo (1)</button>
+                <button class="filtro-btn" data-categoria="Gás">Gás (2)</button>
+                <button class="filtro-btn" data-categoria="Luminosidade">Luminosidade (2)</button>
+                <button class="filtro-btn" data-categoria="Movimento">Movimento (1)</button>
+                <button class="filtro-btn" data-categoria="Nível">Nível (1)</button>
+                <button class="filtro-btn" data-categoria="Peso">Peso (1)</button>
+                <button class="filtro-btn" data-categoria="Proximidade">Proximidade (2)</button>
+                <button class="filtro-btn" data-categoria="RFID">RFID (1)</button>
+                <button class="filtro-btn" data-categoria="Rotação">Rotação (1)</button>
+                <button class="filtro-btn" data-categoria="Som">Som (1)</button>
+                <button class="filtro-btn" data-categoria="Temperatura">Temperatura (2)</button>
+                <button class="filtro-btn" data-categoria="Temperatura e Umidade">Temperatura e Umidade (2)</button>
+                <button class="filtro-btn" data-categoria="Tensão">Tensão (1)</button>
+                <button class="filtro-btn" data-categoria="Umidade">Umidade (1)</button>
+                <button class="filtro-btn" data-categoria="Vibração">Vibração (1)</button>
+            </div>
+            <p class="contador-resultados" id="contadorResultados">Mostrando 25 de 25 sensores</p>
+        </div>
+
+        <!-- ===================== GRID DE SENSORES ===================== -->
+        <div class="sensores-grid" id="sensoresGrid">
+            <a href="./sensores/acs712.html" class="sensor-card" data-nome="acs712" data-categoria="Corrente">
+                <img src="../IMG/sensores/acs712.svg" alt="Ilustração do sensor ACS712" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-bolt"></i> Corrente</span>
+                <h3>ACS712</h3>
+                <span class="sinal-mini">Analógico (tensão proporcional à corrente)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/bh1750.html" class="sensor-card" data-nome="bh1750" data-categoria="Luminosidade">
+                <img src="../IMG/sensores/bh1750.svg" alt="Ilustração do sensor BH1750" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-lightbulb"></i> Luminosidade</span>
+                <h3>BH1750</h3>
+                <span class="sinal-mini">Digital (I2C)</span>
+            </a>
+            <a href="./sensores/celula-carga-hx711.html" class="sensor-card" data-nome="célula de carga + hx711" data-categoria="Peso">
+                <img src="../IMG/sensores/celula-carga-hx711.svg" alt="Ilustração do sensor Célula de Carga + HX711" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-scale-balanced"></i> Peso</span>
+                <h3>Célula de Carga + HX711</h3>
+                <span class="sinal-mini">Digital (2 fios, protocolo próprio do HX711)</span>
+            </a>
+            <a href="./sensores/dht11.html" class="sensor-card" data-nome="dht11" data-categoria="Temperatura e Umidade">
+                <img src="../IMG/sensores/dht11.svg" alt="Ilustração do sensor DHT11" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-droplet"></i> Temperatura e Umidade</span>
+                <h3>DHT11</h3>
+                <span class="sinal-mini">Digital (protocolo próprio, 1 fio)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/dht22.html" class="sensor-card" data-nome="dht22 (am2302)" data-categoria="Temperatura e Umidade">
+                <img src="../IMG/sensores/dht22.svg" alt="Ilustração do sensor DHT22 (AM2302)" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-droplet"></i> Temperatura e Umidade</span>
+                <h3>DHT22 (AM2302)</h3>
+                <span class="sinal-mini">Digital (protocolo próprio, 1 fio)</span>
+            </a>
+            <a href="./sensores/ds18b20.html" class="sensor-card" data-nome="ds18b20" data-categoria="Temperatura">
+                <img src="../IMG/sensores/ds18b20.svg" alt="Ilustração do sensor DS18B20" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-temperature-half"></i> Temperatura</span>
+                <h3>DS18B20</h3>
+                <span class="sinal-mini">Digital (1-Wire, Dallas/Maxim)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/ky-040.html" class="sensor-card" data-nome="encoder incremental ky-040" data-categoria="Encoder">
+                <img src="../IMG/sensores/ky-040.svg" alt="Ilustração do sensor Encoder Incremental KY-040" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-dial-high"></i> Encoder</span>
+                <h3>Encoder Incremental KY-040</h3>
+                <span class="sinal-mini">Digital (quadratura + botão)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/hc-sr04.html" class="sensor-card" data-nome="hc-sr04" data-categoria="Distância">
+                <img src="../IMG/sensores/hc-sr04.svg" alt="Ilustração do sensor HC-SR04" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-ruler"></i> Distância</span>
+                <h3>HC-SR04</h3>
+                <span class="sinal-mini">Digital (pulsos Trigger/Echo)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/ky-037.html" class="sensor-card" data-nome="ky-037" data-categoria="Som">
+                <img src="../IMG/sensores/ky-037.svg" alt="Ilustração do sensor KY-037" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-volume-high"></i> Som</span>
+                <h3>KY-037</h3>
+                <span class="sinal-mini">Analógico e Digital (limiar ajustável)</span>
+            </a>
+            <a href="./sensores/ldr.html" class="sensor-card" data-nome="ldr" data-categoria="Luminosidade">
+                <img src="../IMG/sensores/ldr.svg" alt="Ilustração do sensor LDR" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-lightbulb"></i> Luminosidade</span>
+                <h3>LDR</h3>
+                <span class="sinal-mini">Analógico</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/lm35.html" class="sensor-card" data-nome="lm35" data-categoria="Temperatura">
+                <img src="../IMG/sensores/lm35.svg" alt="Ilustração do sensor LM35" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-temperature-half"></i> Temperatura</span>
+                <h3>LM35</h3>
+                <span class="sinal-mini">Analógico (tensão proporcional, 10mV/°C)</span>
+            </a>
+            <a href="./sensores/mfrc522.html" class="sensor-card" data-nome="mfrc522 (rfid)" data-categoria="RFID">
+                <img src="../IMG/sensores/mfrc522.svg" alt="Ilustração do sensor MFRC522 (RFID)" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-wifi"></i> RFID</span>
+                <h3>MFRC522 (RFID)</h3>
+                <span class="sinal-mini">Digital (SPI)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/mq-135.html" class="sensor-card" data-nome="mq-135" data-categoria="Gás">
+                <img src="../IMG/sensores/mq-135.svg" alt="Ilustração do sensor MQ-135" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-smog"></i> Gás</span>
+                <h3>MQ-135</h3>
+                <span class="sinal-mini">Analógico e Digital (limiar ajustável)</span>
+            </a>
+            <a href="./sensores/mq-2.html" class="sensor-card" data-nome="mq-2" data-categoria="Gás">
+                <img src="../IMG/sensores/mq-2.svg" alt="Ilustração do sensor MQ-2" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-smog"></i> Gás</span>
+                <h3>MQ-2</h3>
+                <span class="sinal-mini">Analógico (nível de gás) e Digital (limiar ajustável)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/pir-hc-sr501.html" class="sensor-card" data-nome="pir hc-sr501" data-categoria="Movimento">
+                <img src="../IMG/sensores/pir-hc-sr501.svg" alt="Ilustração do sensor PIR HC-SR501" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-person-walking"></i> Movimento</span>
+                <h3>PIR HC-SR501</h3>
+                <span class="sinal-mini">Digital</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/sw-420.html" class="sensor-card" data-nome="sw-420" data-categoria="Vibração">
+                <img src="../IMG/sensores/sw-420.svg" alt="Ilustração do sensor SW-420" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-wave-square"></i> Vibração</span>
+                <h3>SW-420</h3>
+                <span class="sinal-mini">Digital</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/lj18a3.html" class="sensor-card" data-nome="sensor capacitivo lj18a3" data-categoria="Proximidade">
+                <img src="../IMG/sensores/lj18a3.svg" alt="Ilustração do sensor Sensor Capacitivo LJ18A3" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-magnet"></i> Proximidade</span>
+                <h3>Sensor Capacitivo LJ18A3</h3>
+                <span class="sinal-mini">Digital (NPN/PNP)</span>
+            </a>
+            <a href="./sensores/soil-moisture.html" class="sensor-card" data-nome="sensor capacitivo de umidade do solo" data-categoria="Umidade">
+                <img src="../IMG/sensores/soil-moisture.svg" alt="Ilustração do sensor Sensor Capacitivo de Umidade do Solo" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-seedling"></i> Umidade</span>
+                <h3>Sensor Capacitivo de Umidade do Solo</h3>
+                <span class="sinal-mini">Analógico</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/fc-37.html" class="sensor-card" data-nome="sensor fc-37 (chuva)" data-categoria="Chuva">
+                <img src="../IMG/sensores/fc-37.svg" alt="Ilustração do sensor Sensor FC-37 (Chuva)" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-cloud-rain"></i> Chuva</span>
+                <h3>Sensor FC-37 (Chuva)</h3>
+                <span class="sinal-mini">Analógico e Digital (limiar ajustável)</span>
+            </a>
+            <a href="./sensores/hall-a3144.html" class="sensor-card" data-nome="sensor hall a3144" data-categoria="Rotação">
+                <img src="../IMG/sensores/hall-a3144.svg" alt="Ilustração do sensor Sensor Hall A3144" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-rotate"></i> Rotação</span>
+                <h3>Sensor Hall A3144</h3>
+                <span class="sinal-mini">Digital (coletor aberto)</span>
+            </a>
+            <a href="./sensores/lj12a3.html" class="sensor-card" data-nome="sensor indutivo lj12a3" data-categoria="Proximidade">
+                <img src="../IMG/sensores/lj12a3.svg" alt="Ilustração do sensor Sensor Indutivo LJ12A3" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-magnet"></i> Proximidade</span>
+                <h3>Sensor Indutivo LJ12A3</h3>
+                <span class="sinal-mini">Digital (NPN/PNP)</span>
+            </a>
+            <a href="./sensores/chama-ir.html" class="sensor-card" data-nome="sensor de chama ir" data-categoria="Chama">
+                <img src="../IMG/sensores/chama-ir.svg" alt="Ilustração do sensor Sensor de Chama IR" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-fire"></i> Chama</span>
+                <h3>Sensor de Chama IR</h3>
+                <span class="sinal-mini">Analógico e Digital (limiar ajustável)</span>
+            </a>
+            <a href="./sensores/boia-nivel.html" class="sensor-card" data-nome="sensor de nível (boia)" data-categoria="Nível">
+                <img src="../IMG/sensores/boia-nivel.svg" alt="Ilustração do sensor Sensor de Nível (Boia)" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-water"></i> Nível</span>
+                <h3>Sensor de Nível (Boia)</h3>
+                <span class="sinal-mini">Digital (contato seco / reed switch)</span>
+            </a>
+            <a href="./sensores/yf-s201.html" class="sensor-card" data-nome="yf-s201" data-categoria="Fluxo">
+                <img src="../IMG/sensores/yf-s201.svg" alt="Ilustração do sensor YF-S201" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-faucet-drip"></i> Fluxo</span>
+                <h3>YF-S201</h3>
+                <span class="sinal-mini">Digital (trem de pulsos)</span> <span class="sinal-mini"><i class="fa-solid fa-code"></i> com código Arduino</span>
+            </a>
+            <a href="./sensores/zmpt101b.html" class="sensor-card" data-nome="zmpt101b" data-categoria="Tensão">
+                <img src="../IMG/sensores/zmpt101b.svg" alt="Ilustração do sensor ZMPT101B" loading="lazy">
+                <span class="categoria-badge"><i class="fa-solid fa-plug"></i> Tensão</span>
+                <h3>ZMPT101B</h3>
+                <span class="sinal-mini">Analógico (onda senoidal, requer calibração)</span>
+            </a>
+        </div>
+        <p class="sem-resultados" id="semResultados">Nenhum sensor encontrado para essa busca/filtro.</p>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

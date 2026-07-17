@@ -28,52 +28,69 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ---------------------------------------------------
-       2) DROPDOWN "Robôs"
-       No mobile funciona por clique (acordeão).
-       No desktop, o CSS já mostra ao passar o mouse,
-       mas mantemos o clique como reforço de acessibilidade
-       (funciona também por toque/teclado).
+       2) DROPDOWNS do menu ("Robôs Industriais" e
+       "Sensores IoT"). A página pode ter mais de um
+       dropdown, então cada um recebe seu próprio listener.
+       No mobile funciona por clique (acordeão). No desktop
+       o clique também funciona como reforço de acessibilidade
+       (toque/teclado).
     --------------------------------------------------- */
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-    if (dropdown && dropdownToggle) {
+    dropdowns.forEach(function (dropdown) {
+        const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
+        if (!dropdownToggle) return;
+
         dropdownToggle.addEventListener("click", function (event) {
             event.preventDefault();
-            dropdown.classList.toggle("open");
+            const estavaAberto = dropdown.classList.contains("open");
+            // fecha todos os outros dropdowns antes de abrir este
+            dropdowns.forEach((d) => d.classList.remove("open"));
+            if (!estavaAberto) {
+                dropdown.classList.add("open");
+            }
         });
+    });
 
-        // fecha o dropdown se o usuário clicar fora dele
-        document.addEventListener("click", function (event) {
+    // fecha qualquer dropdown aberto se o usuário clicar fora dele
+    document.addEventListener("click", function (event) {
+        dropdowns.forEach(function (dropdown) {
             if (!dropdown.contains(event.target)) {
                 dropdown.classList.remove("open");
             }
         });
-    }
+    });
 
     /* ---------------------------------------------------
-       3) SISTEMA DE ABAS (TABS) das páginas de robôs
+       3) SISTEMA DE ABAS (TABS) das páginas de robôs,
+       sensores e Arduino.
        Cada botão ".tab-btn" possui um atributo data-tab
        que corresponde ao id do painel ".tab-content"
-       que deve ser exibido.
+       que deve ser exibido. O sistema é escopado por
+       ".tabs-section", pois uma mesma página (ex.: Arduino)
+       pode ter mais de um grupo de abas independente.
     --------------------------------------------------- */
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const tabContents = document.querySelectorAll(".tab-content");
+    const secoesDeAbas = document.querySelectorAll(".tabs-section");
 
-    tabButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const targetId = button.getAttribute("data-tab");
+    secoesDeAbas.forEach(function (secao) {
+        const tabButtons = secao.querySelectorAll(".tab-btn");
+        const tabContents = secao.querySelectorAll(".tab-content");
 
-            // remove "active" de todos os botões e painéis
-            tabButtons.forEach((btn) => btn.classList.remove("active"));
-            tabContents.forEach((panel) => panel.classList.remove("active"));
+        tabButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const targetId = button.getAttribute("data-tab");
 
-            // ativa apenas o botão clicado e o painel correspondente
-            button.classList.add("active");
-            const targetPanel = document.getElementById(targetId);
-            if (targetPanel) {
-                targetPanel.classList.add("active");
-            }
+                // remove "active" apenas dos botões/painéis desta seção
+                tabButtons.forEach((btn) => btn.classList.remove("active"));
+                tabContents.forEach((panel) => panel.classList.remove("active"));
+
+                // ativa apenas o botão clicado e o painel correspondente
+                button.classList.add("active");
+                const targetPanel = secao.querySelector("#" + CSS.escape(targetId));
+                if (targetPanel) {
+                    targetPanel.classList.add("active");
+                }
+            });
         });
     });
 

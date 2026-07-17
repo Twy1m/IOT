@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../robot.css">
+    <link rel="stylesheet" href="../../sensores.css">
+    <script src="../../js/script.js" defer></script>
+    <title>Sensor Capacitivo LJ18A3 - Sensores IoT</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../../index.html"><img src="../../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../../index.html">Home</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="../cartesiano.html">Robô Cartesiano</a><br>
+                            <a href="../scara.html">Robô SCARA</a><br>
+                            <a href="../articulado.html">Robô Articulado</a><br>
+                            <a href="../cilindrico.html">Robô Cilíndrico</a><br>
+                            <a href="../delta.html">Robô Delta</a><br>
+                            <a href="../polar.html">Robô Polar</a><br>
+                            <a href="../colaborativo.html">Robô Colaborativo</a><br>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="../catalogo-sensores.html" class="ver-catalogo-link">Ver catálogo completo</a><br>
+                            <a href="./acs712.html">ACS712</a><br>
+                            <a href="./bh1750.html">BH1750</a><br>
+                            <a href="./celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./dht11.html">DHT11</a><br>
+                            <a href="./dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./ds18b20.html">DS18B20</a><br>
+                            <a href="./ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./hc-sr04.html">HC-SR04</a><br>
+                            <a href="./ky-037.html">KY-037</a><br>
+                            <a href="./ldr.html">LDR</a><br>
+                            <a href="./lm35.html">LM35</a><br>
+                            <a href="./mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./mq-135.html">MQ-135</a><br>
+                            <a href="./mq-2.html">MQ-2</a><br>
+                            <a href="./pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./sw-420.html">SW-420</a><br>
+                            <a href="./lj18a3.html" class="linha-embaixo">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./yf-s201.html">YF-S201</a><br>
+                            <a href="./zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="../arduino.html">Arduino</a>
+                    <a href="../referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../catalogo-sensores.html">Sensores IoT</a> / Proximidade / Sensor Capacitivo LJ18A3</p>
+            <span class="categoria-badge"><i class="fa-solid fa-magnet"></i> Proximidade</span>
+            <h1>Sensor Capacitivo LJ18A3</h1>
+            <img src="../../IMG/sensores/lj18a3.svg" alt="Ilustração do sensor Sensor Capacitivo LJ18A3" class="hero-img sensor-hero-img">
+            <p>O LJ18A3 é um sensor de proximidade capacitivo, capaz de detectar tanto objetos metálicos quanto não metálicos — como plásticos, líquidos e grãos — sem contato direto.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>O LJ18A3 é um sensor de proximidade capacitivo, capaz de detectar tanto objetos metálicos quanto não metálicos — como plásticos, líquidos e grãos — sem contato direto.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>Forma um campo elétrico capacitivo na face sensora; a aproximação de qualquer material com constante dielétrica diferente do ar (metal, líquido, madeira, plástico) altera a capacitância do circuito oscilador interno, o que é detectado pelo sensor e traduzido em uma comutação na saída digital.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Especificações técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações</button>
+                <button class="tab-btn" data-tab="exemplo">Exemplo de uso</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Especificações técnicas</h2>
+                <div class="tipo-sinal-box">
+                    <span class="protocolo-tag protocolo-tag-lg"><i class="fa-solid fa-signal"></i> Digital (NPN/PNP)</span>
+                    <p>Saída digital em corrente contínua, semelhante ao sensor indutivo, também exigindo interface para uso com Arduino.</p>
+                </div>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Tensão de alimentação: 6 – 36V DC</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Distância de detecção: ~8mm (modelo LJ18A3-8-Z)</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Saída: NPN ou PNP</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Encapsulamento cilíndrico rosqueável M18</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Sensibilidade ajustável por trimpot em alguns modelos</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais e IoT</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Controle de nível em silos de grãos e reservatórios de líquidos</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Detecção de embalagens plásticas</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Contagem de objetos não metálicos</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Detecção de nível através da parede de tanques (sem contato com o produto)</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="exemplo">
+                <h2>Exemplo de utilização em um projeto</h2>
+                <div class="iot-text">
+                    <p>Instalado na parede externa de um reservatório de água, o sensor capacitivo detecta a presença de líquido sem entrar em contato com ele; ao identificar nível baixo, o Arduino aciona um relé que liga a bomba de reposição automaticamente.</p>
+                    
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Fabricantes e modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Diversos (genéricos)</div>
+                    <div class="modelo-nome">LJ18A3-8-Z/BX</div>
+                    <ul>
+                        <li>Amplamente usado em automação de baixo custo</li>
+                    </ul>
+                </div>
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Omron</div>
+                    <div class="modelo-nome">Linha E2K</div>
+                    <ul>
+                        <li>Padrão industrial de referência para aplicações capacitivas</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

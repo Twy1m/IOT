@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../robot.css">
+    <link rel="stylesheet" href="../../sensores.css">
+    <script src="../../js/script.js" defer></script>
+    <title>MQ-2 - Sensores IoT</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../../index.html"><img src="../../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../../index.html">Home</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="../cartesiano.html">Robô Cartesiano</a><br>
+                            <a href="../scara.html">Robô SCARA</a><br>
+                            <a href="../articulado.html">Robô Articulado</a><br>
+                            <a href="../cilindrico.html">Robô Cilíndrico</a><br>
+                            <a href="../delta.html">Robô Delta</a><br>
+                            <a href="../polar.html">Robô Polar</a><br>
+                            <a href="../colaborativo.html">Robô Colaborativo</a><br>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="../catalogo-sensores.html" class="ver-catalogo-link">Ver catálogo completo</a><br>
+                            <a href="./acs712.html">ACS712</a><br>
+                            <a href="./bh1750.html">BH1750</a><br>
+                            <a href="./celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./dht11.html">DHT11</a><br>
+                            <a href="./dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./ds18b20.html">DS18B20</a><br>
+                            <a href="./ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./hc-sr04.html">HC-SR04</a><br>
+                            <a href="./ky-037.html">KY-037</a><br>
+                            <a href="./ldr.html">LDR</a><br>
+                            <a href="./lm35.html">LM35</a><br>
+                            <a href="./mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./mq-135.html">MQ-135</a><br>
+                            <a href="./mq-2.html" class="linha-embaixo">MQ-2</a><br>
+                            <a href="./pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./sw-420.html">SW-420</a><br>
+                            <a href="./lj18a3.html">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./yf-s201.html">YF-S201</a><br>
+                            <a href="./zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="../arduino.html">Arduino</a>
+                    <a href="../referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../catalogo-sensores.html">Sensores IoT</a> / Gás / MQ-2</p>
+            <span class="categoria-badge"><i class="fa-solid fa-smog"></i> Gás</span>
+            <h1>MQ-2</h1>
+            <img src="../../IMG/sensores/mq-2.svg" alt="Ilustração do sensor MQ-2" class="hero-img sensor-hero-img">
+            <p>O MQ-2 é um sensor de gás semicondutor sensível a fumaça e a diversos gases combustíveis, como GLP, propano, metano, hidrogênio e vapores de álcool.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>O MQ-2 é um sensor de gás semicondutor sensível a fumaça e a diversos gases combustíveis, como GLP, propano, metano, hidrogênio e vapores de álcool.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>Seu elemento sensor é feito de dióxido de estanho (SnO2), cuja condutividade elétrica se altera na presença dos gases-alvo; um filamento interno aquece o elemento até a temperatura ideal de operação, e quanto maior a concentração de gás no ambiente, maior a condutividade do material (menor resistência), gerando um sinal proporcional na saída.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Especificações técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações</button>
+                <button class="tab-btn" data-tab="exemplo">Exemplo de uso</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Especificações técnicas</h2>
+                <div class="tipo-sinal-box">
+                    <span class="protocolo-tag protocolo-tag-lg"><i class="fa-solid fa-signal"></i> Analógico (nível de gás) e Digital (limiar ajustável)</span>
+                    <p>Fornece uma saída analógica proporcional à concentração de gás e uma saída digital que comuta quando um limiar configurado no trimpot é ultrapassado.</p>
+                </div>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Tensão de alimentação: 5V</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Faixa de detecção: 300 a 10.000 ppm (GLP, fumaça, butano, metano)</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Tempo de pré-aquecimento: ~20s após ligar (estabilização plena em 24–48h)</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Saída digital com trimpot de sensibilidade ajustável</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais e IoT</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Alarmes de vazamento de GLP em cozinhas</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Detecção de fumaça e princípio de incêndio</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Monitoramento de ambientes industriais com risco de explosão</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Sistemas de exaustão automática</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="exemplo">
+                <h2>Exemplo de utilização em um projeto</h2>
+                <div class="iot-text">
+                    <p>Instalado próximo ao fogão, o MQ-2 é lido continuamente pelo pino A0; ao ultrapassar o limiar de segurança configurado, o Arduino aciona simultaneamente um buzzer de alarme e uma válvula solenoide que corta o fornecimento de gás.</p>
+                    <p><i class="fa-solid fa-code"></i> Este sensor possui um <strong>exemplo completo de programação em Arduino</strong> disponível na página <a href="../arduino.html">Arduino</a>.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Fabricantes e modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Winsen Electronics</div>
+                    <div class="modelo-nome">MQ-2 (chip original)</div>
+                    <ul>
+                        <li>Fabricante de referência da família MQ</li>
+                        <li>Amplamente utilizado em kits didáticos</li>
+                    </ul>
+                </div>
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Diversos (genéricos)</div>
+                    <div class="modelo-nome">Módulo MQ-2 c/ LM393</div>
+                    <ul>
+                        <li>Já inclui comparador e trimpot de calibração</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

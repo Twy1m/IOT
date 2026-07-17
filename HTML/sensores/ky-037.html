@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../robot.css">
+    <link rel="stylesheet" href="../../sensores.css">
+    <script src="../../js/script.js" defer></script>
+    <title>KY-037 - Sensores IoT</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../../index.html"><img src="../../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../../index.html">Home</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="../cartesiano.html">Robô Cartesiano</a><br>
+                            <a href="../scara.html">Robô SCARA</a><br>
+                            <a href="../articulado.html">Robô Articulado</a><br>
+                            <a href="../cilindrico.html">Robô Cilíndrico</a><br>
+                            <a href="../delta.html">Robô Delta</a><br>
+                            <a href="../polar.html">Robô Polar</a><br>
+                            <a href="../colaborativo.html">Robô Colaborativo</a><br>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="../catalogo-sensores.html" class="ver-catalogo-link">Ver catálogo completo</a><br>
+                            <a href="./acs712.html">ACS712</a><br>
+                            <a href="./bh1750.html">BH1750</a><br>
+                            <a href="./celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./dht11.html">DHT11</a><br>
+                            <a href="./dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./ds18b20.html">DS18B20</a><br>
+                            <a href="./ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./hc-sr04.html">HC-SR04</a><br>
+                            <a href="./ky-037.html" class="linha-embaixo">KY-037</a><br>
+                            <a href="./ldr.html">LDR</a><br>
+                            <a href="./lm35.html">LM35</a><br>
+                            <a href="./mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./mq-135.html">MQ-135</a><br>
+                            <a href="./mq-2.html">MQ-2</a><br>
+                            <a href="./pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./sw-420.html">SW-420</a><br>
+                            <a href="./lj18a3.html">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./yf-s201.html">YF-S201</a><br>
+                            <a href="./zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="../arduino.html">Arduino</a>
+                    <a href="../referencias.html">Referências</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../catalogo-sensores.html">Sensores IoT</a> / Som / KY-037</p>
+            <span class="categoria-badge"><i class="fa-solid fa-volume-high"></i> Som</span>
+            <h1>KY-037</h1>
+            <img src="../../IMG/sensores/ky-037.svg" alt="Ilustração do sensor KY-037" class="hero-img sensor-hero-img">
+            <p>O KY-037 é um módulo sensor de som (microfone) capaz de detectar a intensidade sonora do ambiente.</p>
+        </section>
+
+        <!-- ===================== CONCEITO / PRINCÍPIO DE FUNCIONAMENTO ===================== -->
+        <section class="sobre">
+            <h2>Conceito</h2>
+            <p>O KY-037 é um módulo sensor de som (microfone) capaz de detectar a intensidade sonora do ambiente.</p>
+            <h2>Princípio de funcionamento</h2>
+            <p>Um microfone de eletreto capta as ondas sonoras e as converte em um sinal elétrico analógico proporcional à amplitude do som captado; o módulo conta com um estágio de amplificação e um comparador LM393 que também gera uma saída digital, comutando sempre que o som ultrapassa um limiar ajustável por trimpot.</p>
+        </section>
+
+        <!-- ===================== ABAS ===================== -->
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="specs">Especificações técnicas</button>
+                <button class="tab-btn" data-tab="apps">Aplicações</button>
+                <button class="tab-btn" data-tab="exemplo">Exemplo de uso</button>
+                <button class="tab-btn" data-tab="models">Modelos comerciais</button>
+            </div>
+
+            <div class="tab-content active" id="specs">
+                <h2>Especificações técnicas</h2>
+                <div class="tipo-sinal-box">
+                    <span class="protocolo-tag protocolo-tag-lg"><i class="fa-solid fa-signal"></i> Analógico e Digital (limiar ajustável)</span>
+                    <p>Saída analógica contínua com o nível do som e saída digital que comuta ao detectar som acima do limiar configurado.</p>
+                </div>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Tensão de alimentação: 3,3 – 5V</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Saída analógica proporcional à amplitude sonora</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Saída digital com limiar ajustável por trimpot</p></div>
+                    <div class="card"><i class="fa-solid fa-microchip"></i><p>Alta sensibilidade a sons de curta duração</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="apps">
+                <h2>Aplicações industriais e IoT</h2>
+                <div class="cards">
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Sistemas de segurança acionados por som (quebra de vidro, gritos)</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Monitoramento de ruído em ambientes industriais</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Automação residencial do tipo 'clap switch'</p></div>
+                    <div class="card"><i class="fa-solid fa-industry"></i><p>Detecção de anomalias sonoras em máquinas</p></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="exemplo">
+                <h2>Exemplo de utilização em um projeto</h2>
+                <div class="iot-text">
+                    <p>Em um projeto do tipo 'clap-on/clap-off', o Arduino monitora a saída digital do KY-037; ao detectar duas batidas de palma em um intervalo de até 1 segundo, ele alterna o estado de um relé que liga ou desliga a iluminação do ambiente.</p>
+                    
+                </div>
+            </div>
+
+            <div class="tab-content" id="models">
+                <h2>Fabricantes e modelos comerciais</h2>
+                <div class="modelos-grid">
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Diversos (genéricos)</div>
+                    <div class="modelo-nome">Módulo KY-037 (alta sensibilidade)</div>
+                    <ul>
+                        <li>Trimpot de ajuste de sensibilidade embutido</li>
+                    </ul>
+                </div>
+                <div class="modelo-card">
+                    <div class="modelo-fabricante">Diversos</div>
+                    <div class="modelo-nome">KY-038</div>
+                    <ul>
+                        <li>Versão similar, com sensibilidade um pouco menor</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Seu Nome</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
