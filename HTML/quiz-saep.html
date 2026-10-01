@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../IMG/SENAI_Sao_Paulo_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../robot.css">
+    <link rel="stylesheet" href="../sensores.css">
+    <link rel="stylesheet" href="../quiz.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+    <script>
+        // Aplica o realce de sintaxe nos blocos de código Arduino (C/C++)
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.hljs) { hljs.highlightAll(); }
+        });
+    </script>
+    <title>Quiz SAEP - Robôs Industriais & IoT</title>
+</head>
+
+<body>
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+        <div class="div-header">
+            <a href="../index.html"><img src="../IMG/SENAI_Sao_Paulo_logo.png" alt="Logo SENAI" class="img-senai"></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navigation" id="navigation">
+                <nav>
+                    <a href="../index.html">Home</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Robôs Industriais <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="./cartesiano.html">Robô Cartesiano</a><br>
+                            <a href="./scara.html">Robô SCARA</a><br>
+                            <a href="./articulado.html">Robô Articulado</a><br>
+                            <a href="./cilindrico.html">Robô Cilíndrico</a><br>
+                            <a href="./delta.html">Robô Delta</a><br>
+                            <a href="./polar.html">Robô Polar</a><br>
+                            <a href="./colaborativo.html">Robô Colaborativo</a><br>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Sensores IoT <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu dropdown-menu-scroll">
+                            <a href="./catalogo-sensores.html">Ver catálogo completo</a><br>
+                            <a href="./sensores/acs712.html">ACS712</a><br>
+                            <a href="./sensores/bh1750.html">BH1750</a><br>
+                            <a href="./sensores/celula-carga-hx711.html">Célula de Carga + HX711</a><br>
+                            <a href="./sensores/dht11.html">DHT11</a><br>
+                            <a href="./sensores/dht22.html">DHT22 (AM2302)</a><br>
+                            <a href="./sensores/ds18b20.html">DS18B20</a><br>
+                            <a href="./sensores/ky-040.html">Encoder Incremental KY-040</a><br>
+                            <a href="./sensores/hc-sr04.html">HC-SR04</a><br>
+                            <a href="./sensores/ky-037.html">KY-037</a><br>
+                            <a href="./sensores/ldr.html">LDR</a><br>
+                            <a href="./sensores/lm35.html">LM35</a><br>
+                            <a href="./sensores/mfrc522.html">MFRC522 (RFID)</a><br>
+                            <a href="./sensores/mq-135.html">MQ-135</a><br>
+                            <a href="./sensores/mq-2.html">MQ-2</a><br>
+                            <a href="./sensores/pir-hc-sr501.html">PIR HC-SR501</a><br>
+                            <a href="./sensores/sw-420.html">SW-420</a><br>
+                            <a href="./sensores/lj18a3.html">Sensor Capacitivo LJ18A3</a><br>
+                            <a href="./sensores/soil-moisture.html">Sensor Capacitivo de Umidade do Solo</a><br>
+                            <a href="./sensores/fc-37.html">Sensor FC-37 (Chuva)</a><br>
+                            <a href="./sensores/hall-a3144.html">Sensor Hall A3144</a><br>
+                            <a href="./sensores/lj12a3.html">Sensor Indutivo LJ12A3</a><br>
+                            <a href="./sensores/chama-ir.html">Sensor de Chama IR</a><br>
+                            <a href="./sensores/boia-nivel.html">Sensor de Nível (Boia)</a><br>
+                            <a href="./sensores/yf-s201.html">YF-S201</a><br>
+                            <a href="./sensores/zmpt101b.html">ZMPT101B</a><br>
+                        </div>
+                    </div>
+
+                    <a href="./arduino.html">Arduino</a>
+                    <a href="./desafios-arduino.html">Desafios Arduino</a>
+                    <a href="./desafios-esp8266.html">Desafios ESP8266</a>
+                    <a href="./referencias.html">Referências</a>
+                    <a href="./quiz-saep.html"><span class="linha-embaixo">Quiz SAEP</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <p class="breadcrumb"><a href="../index.html">Home</a> / Quiz SAEP</p>
+            <h1>Quiz modelo SAEP</h1>
+            <p>Teste seus conhecimentos com questões no formato do SAEP: cada uma traz uma situação-problema (contexto), um comando objetivo (gatilho) e quatro alternativas. O conteúdo é baseado nas páginas deste site.</p>
+        </section>
+
+        <div class="quiz-wrap">
+
+            <!-- ===================== TELA INICIAL ===================== -->
+            <section class="quiz-card quiz-intro" id="quizInicio">
+                <h2>Antes de começar</h2>
+                <p>O quiz tem <strong><span id="quizTotal">10</span> questões</strong> de múltipla escolha, com apenas uma alternativa correta em cada. Ao responder, você vê na hora o comentário da questão e um link para revisar o conteúdo no site.</p>
+                <p>Assuntos cobrados:</p>
+                <div class="quiz-topicos">
+                    <span>Robôs industriais</span>
+                    <span>Sensores IoT</span>
+                    <span>Multímetro</span>
+                    <span>Arduino: portas e conceitos</span>
+                    <span>ESP8266</span>
+                    <span>Código</span>
+                </div>
+                <button type="button" class="quiz-btn" id="quizIniciar"><i class="fa-solid fa-play"></i> Iniciar quiz</button>
+            </section>
+
+            <!-- ===================== QUESTÃO ===================== -->
+            <section class="quiz-card" id="quizQuestao" hidden>
+                <div class="quiz-topo">
+                    <span class="quiz-contador" id="quizContador">Questão 1 de 10</span>
+                    <span class="quiz-tag" id="quizTema"></span>
+                </div>
+                <div class="quiz-barra-wrap" id="quizBarraWrap" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Progresso do quiz">
+                    <div class="quiz-barra" id="quizBarra"></div>
+                </div>
+
+                <div class="quiz-contexto">
+                    <div class="quiz-rotulo">Contexto</div>
+                    <p id="quizContexto"></p>
+                    <pre id="quizCodigo" hidden></pre>
+                </div>
+
+                <div class="quiz-rotulo">Questão</div>
+                <p class="quiz-gatilho" id="quizGatilho"></p>
+
+                <div class="quiz-alternativas" id="quizAlternativas"></div>
+
+                <div class="quiz-feedback" id="quizFeedback" aria-live="polite" hidden>
+                    <h3 id="quizFeedbackTitulo"></h3>
+                    <p id="quizExplicacao"></p>
+                    <a id="quizLinkRevisar" href="#"></a>
+                </div>
+
+                <div class="quiz-acoes">
+                    <button type="button" class="quiz-btn" id="quizProxima" hidden>Próxima questão</button>
+                </div>
+            </section>
+
+            <!-- ===================== RESULTADO ===================== -->
+            <section class="quiz-card quiz-resultado" id="quizResultado" hidden>
+                <h2>Resultado</h2>
+                <p class="quiz-nota" id="quizNota">0 / 10</p>
+                <p class="quiz-pct" id="quizPct"></p>
+                <p class="quiz-mensagem" id="quizMensagem"></p>
+                <div class="quiz-revisao" id="quizRevisao"></div>
+                <button type="button" class="quiz-btn" id="quizRefazer"><i class="fa-solid fa-rotate-right"></i> Refazer quiz</button>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer>
+        <div class="contatos">
+            <div class="contato-item">
+                <a href="https://github.com/Twy1m" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <p>Matheus Steingraber</p>
+                <p><span class="email">matheusg.stein@gmail.com</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
